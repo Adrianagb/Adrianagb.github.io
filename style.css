@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Pacifico');
 
 body {
   font-family: "Montserrat", "Optima", "Helvetica", sans-serif;
@@ -10,6 +10,9 @@ body {
   margin: 0 auto;
 }
 
+body {
+  background-image: url(snow.png);
+}
 a {
   color: rgb(228,98,168);
   text-decoration: none;
@@ -29,7 +32,7 @@ a:active {
 }
 
 h1, h2, h3, {
-  font-family: "Montserrat", "Optima", sans-serif;
+  font-family:"Montserrat", "Optima", sans-serif;
   font-weight: 700;
 }
 
@@ -44,6 +47,11 @@ header {
 header h1 {
   font-size: 70px;
 
+}
+header h2{
+  font-size: 40px;
+  font-family:"Montserrat", "Optima", sans-serif;
+  color: rgb(221,171,195);
 }
 address {
   font-style:normal;
@@ -63,10 +71,37 @@ address p:last-child:after {
   padding: 0;
 }
 
+nav {
+  text-align: center;
+}
+
+nav p {
+display: inline-block;
+}
+
+nav p:after {
+  content: " • ";
+  padding: 0 10px;
+}
+
+nav p:last-child:after {
+  content: "  ";
+  padding: 0;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 80px;
+  grid-column-gap: 70px;
+}
+
+#culver main {
+  grid-template-columns: 1fr 560px;
+}
+
+#culver #allabout h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 li {
@@ -111,6 +146,20 @@ li span {
   margin-bottom: 0;
 }
 
+#greenjuice h2 {
+  font-family: "Pacifico", "Optima", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+}
+
+#allabout h2 {
+  font-family: "Pacifico", "Optima", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
 footer {
   font-style: normal;
   font-weight: bold;
@@ -119,11 +168,12 @@ footer {
 }
 
 
+
 @supports(display: grid) {
   .message {
     display: none;
   }
-}
+
 
 
 
